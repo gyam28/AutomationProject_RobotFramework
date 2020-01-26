@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.1.2 (Python 3.8.0 on darwin)" generated="20200126 20:53:19.813" rpa="false">
+<suite id="s1" name="MainFile" source="/Users/gina/Desktop/testAutomationProj/tests/MainFile.robot">
+<test id="s1-t1" name="Should be able to access &quot;Team&quot; page">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200126 20:53:20.094" level="INFO">Opening browser 'safari' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200126 20:53:20.094" endtime="20200126 20:53:36.457"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200126 20:53:36.459" endtime="20200126 20:53:36.521"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:20.093" endtime="20200126 20:53:36.521"></status>
+</kw>
+<kw name="Go to Landing page" library="Main_pageApp">
+<kw name="Navigate to" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20200126 20:53:36.523" level="INFO">Opening url 'http://www.robotframeworktutorial.com/front-office'</msg>
+<status status="PASS" starttime="20200126 20:53:36.523" endtime="20200126 20:53:39.192"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:36.522" endtime="20200126 20:53:39.193"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${LANDING_NAV_ELEM}</arg>
+</arguments>
+<status status="PASS" starttime="20200126 20:53:39.193" endtime="20200126 20:53:39.201"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:39.193" endtime="20200126 20:53:39.201"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:36.521" endtime="20200126 20:53:39.201"></status>
+</kw>
+<kw name="Go to &quot;Team&quot; page" library="Main_pageApp">
+<kw name="Select &quot;Team&quot; Page" library="TopNav">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${TOPNAV_TEAM_LINK}</arg>
+</arguments>
+<msg timestamp="20200126 20:53:39.202" level="INFO">Clicking link 'css=#bs-example-navbar-collapse-1 &gt; ul &gt; li:nth-child(5) &gt; a'.</msg>
+<status status="PASS" starttime="20200126 20:53:39.202" endtime="20200126 20:53:39.228"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200126 20:53:42.229" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200126 20:53:39.229" endtime="20200126 20:53:42.229"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:39.201" endtime="20200126 20:53:42.230"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Team">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${TEAM_HEADER_LABEL}</arg>
+</arguments>
+<status status="PASS" starttime="20200126 20:53:42.231" endtime="20200126 20:53:42.238"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200126 20:53:45.241" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200126 20:53:42.238" endtime="20200126 20:53:45.241"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:42.230" endtime="20200126 20:53:45.241"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:39.201" endtime="20200126 20:53:45.241"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200126 20:53:45.243" endtime="20200126 20:53:45.263"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:45.243" endtime="20200126 20:53:45.264"></status>
+</kw>
+<doc>This is test 1</doc>
+<tags>
+<tag>test1</tag>
+</tags>
+<status status="PASS" starttime="20200126 20:53:20.092" endtime="20200126 20:53:45.264" critical="yes"></status>
+</test>
+<test id="s1-t2" name="&quot;Team&quot; page should match requirements (correct header text)">
+<kw name="Begin Web Test" library="CommonWeb" type="setup">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>about:blank</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20200126 20:53:45.267" level="INFO">Opening browser 'safari' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20200126 20:53:45.266" endtime="20200126 20:53:46.842"></status>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20200126 20:53:46.844" endtime="20200126 20:53:46.876"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:45.266" endtime="20200126 20:53:46.877"></status>
+</kw>
+<kw name="Go to Landing page" library="Main_pageApp">
+<kw name="Navigate to" library="LandingPage">
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<arguments>
+<arg>${START_URL}</arg>
+</arguments>
+<msg timestamp="20200126 20:53:46.879" level="INFO">Opening url 'http://www.robotframeworktutorial.com/front-office'</msg>
+<status status="PASS" starttime="20200126 20:53:46.878" endtime="20200126 20:53:49.560"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:46.878" endtime="20200126 20:53:49.560"></status>
+</kw>
+<kw name="Verify Page Loaded" library="LandingPage">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${LANDING_NAV_ELEM}</arg>
+</arguments>
+<status status="PASS" starttime="20200126 20:53:49.561" endtime="20200126 20:53:49.599"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:49.561" endtime="20200126 20:53:49.599"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:46.877" endtime="20200126 20:53:49.599"></status>
+</kw>
+<kw name="Go to &quot;Team&quot; page" library="Main_pageApp">
+<kw name="Select &quot;Team&quot; Page" library="TopNav">
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>${TOPNAV_TEAM_LINK}</arg>
+</arguments>
+<msg timestamp="20200126 20:53:49.600" level="INFO">Clicking link 'css=#bs-example-navbar-collapse-1 &gt; ul &gt; li:nth-child(5) &gt; a'.</msg>
+<status status="PASS" starttime="20200126 20:53:49.600" endtime="20200126 20:53:49.711"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200126 20:53:52.712" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200126 20:53:49.711" endtime="20200126 20:53:52.712"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:49.600" endtime="20200126 20:53:52.713"></status>
+</kw>
+<kw name="Verify Page Loaded" library="Team">
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<arguments>
+<arg>${TEAM_HEADER_LABEL}</arg>
+</arguments>
+<status status="PASS" starttime="20200126 20:53:52.714" endtime="20200126 20:53:52.721"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>3s</arg>
+</arguments>
+<msg timestamp="20200126 20:53:55.724" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20200126 20:53:52.721" endtime="20200126 20:53:55.724"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:52.713" endtime="20200126 20:53:55.725"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:49.599" endtime="20200126 20:53:55.725"></status>
+</kw>
+<kw name="Validate &quot;Team&quot; Page" library="Main_pageApp">
+<kw name="Validate Page Contents" library="Team">
+<kw name="Element Text Should Be" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<arguments>
+<arg>${TEAM_HEADER_LABEL}</arg>
+<arg>Our Amazing Team</arg>
+</arguments>
+<msg timestamp="20200126 20:53:55.728" level="INFO">Verifying element 'css=#team &gt; div &gt; div:nth-child(1) &gt; div &gt; h2' contains exact text 'Our Amazing Team'.</msg>
+<status status="PASS" starttime="20200126 20:53:55.727" endtime="20200126 20:53:55.740"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:55.727" endtime="20200126 20:53:55.740"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:55.726" endtime="20200126 20:53:55.740"></status>
+</kw>
+<kw name="End Web Test" library="CommonWeb" type="teardown">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20200126 20:53:55.741" endtime="20200126 20:53:55.748"></status>
+</kw>
+<status status="PASS" starttime="20200126 20:53:55.740" endtime="20200126 20:53:55.748"></status>
+</kw>
+<doc>This is test 2</doc>
+<tags>
+<tag>test2</tag>
+</tags>
+<status status="PASS" starttime="20200126 20:53:45.265" endtime="20200126 20:53:55.748" critical="yes"></status>
+</test>
+<doc>This is my first Automated Test script project</doc>
+<status status="PASS" starttime="20200126 20:53:19.814" endtime="20200126 20:53:55.750"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0">Critical Tests</stat>
+<stat pass="2" fail="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0">test1</stat>
+<stat pass="1" fail="0">test2</stat>
+</tag>
+<suite>
+<stat pass="2" fail="0" id="s1" name="MainFile">MainFile</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
